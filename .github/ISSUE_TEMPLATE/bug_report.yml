@@ -1,0 +1,63 @@
+name: Bug report
+description: Report something that is not working in FlySafe.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in any language. See the [multilingual guide](https://github.com/FlySafe-PRO/feedback#readme).
+        Please search existing issues first and report one problem per issue. Everything posted here is public; remove personal data from screenshots and logs.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: FlySafe platform
+      options:
+        - Android native app
+        - iOS native app (Swift)
+        - PWA / website / installed web app
+        - Other / unsure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: FlySafe app version
+      description: Include the build number if available. Write "unknown" if you cannot find it.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device, OS and browser
+      description: Device model and OS version; for the PWA, also include browser name and version.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which screen were you on, and what did you do? How often does it happen?
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the exact error message, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, logs or other context
+      description: Optional. Attach helpful evidence after removing personal information and private flight or location data.

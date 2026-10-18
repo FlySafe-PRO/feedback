@@ -1,0 +1,52 @@
+name: Translation correction
+description: Report incorrect, missing or unclear wording in a supported language.
+title: "[Translation]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in any language. See the [multilingual guide](https://github.com/FlySafe-PRO/feedback#readme).
+        Search existing issues first. Screenshots are helpful; remove personal data because issues are public.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: FlySafe platform
+      options:
+        - Android native app
+        - iOS native app (Swift)
+        - PWA / website / installed web app
+        - Feedback README
+        - Other / unsure
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language and region
+      placeholder: "For example: Slovenian, German (Switzerland), Portuguese (Brazil)"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Screen or location and app version
+      description: Tell us where the text appears and which app version you use, if known.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current wording
+      description: Copy the text or describe the missing translation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Suggested wording and explanation
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or context

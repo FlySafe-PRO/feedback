@@ -1,0 +1,44 @@
+name: Feature request
+description: Suggest a new feature or an improvement to FlySafe.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in any language. See the [multilingual guide](https://github.com/FlySafe-PRO/feedback#readme).
+        Search existing requests first. If one matches, add a reaction or useful context there. Keep one idea per issue. Posts are public.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Relevant platforms
+      multiple: true
+      options:
+        - Android native app
+        - iOS native app (Swift)
+        - PWA / website / installed web app
+        - All platforms / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe your use case and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed feature or improvement
+      description: Explain how you would like it to work. Examples or sketches are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or current workaround
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Optional screenshots or examples. Remove personal data before posting.
